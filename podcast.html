@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ENGAGEMENT · Marco Investigation</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="ENGAGEMENT, le podcast de Marco Investigation présenté par Marco Gicquel : échanges, réflexions, discussions. Six épisodes, avec des extraits à écouter.">
+<meta name="theme-color" content="#17140F">
+<link rel="icon" href="assets/img/site/favicon.png">
+<link rel="preload" href="assets/fonts/fraunces-var.woff" as="font" type="font/woff" crossorigin>
+<link rel="stylesheet" href="assets/css/fonts.css">
+<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body data-page="podcast">
+<a class="skip" href="#contenu" data-i18n="skip">Aller au contenu</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Marco Investigation, accueil">
+      <img src="assets/img/site/logo-mi.png" alt="" width="38" height="38">
+      <span>Marco Investigation</span>
+    </a>
+    <nav class="nav" aria-label="Rubriques">
+      <a href="index.html#enquetes" data-i18n="nav.enquetes">Enquêtes</a>
+      <a href="podcast.html" aria-current="page" data-i18n="nav.podcast">Podcast</a>
+      <a href="index.html#kiosque" data-i18n="nav.kiosque">Magazines</a>
+      <a href="index.html#ecoles" data-i18n="nav.ecoles">Écoles</a>
+      <a href="index.html#presse" data-i18n="nav.presse">Presse</a>
+      <a href="index.html#portrait" data-i18n="nav.apropos">À propos</a>
+      <a href="index.html#courrier" data-i18n="nav.contact">Contact</a>
+    </nav>
+    <div class="tools">
+      <div class="lang-switch" role="group" aria-label="Langue / Language">
+        <button type="button" data-lang="fr" aria-pressed="true">FR</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+      <button type="button" class="chip-btn calm-btn" data-calm aria-pressed="false" title="Réduire les animations"><svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h4l2-5 4 10 2-5h6" fill="none" stroke="currentColor" stroke-width="2"/></svg><span class="calm-text" data-i18n="calm">Mode calme</span></button>
+      <button type="button" class="chip-btn menu-btn" data-menu aria-expanded="false" aria-controls="drawer"><span data-i18n="menu">Sommaire</span></button>
+    </div>
+  </div>
+</header>
+
+<div class="drawer" id="drawer" hidden>
+  <div class="drawer__top">
+    <span class="label" data-i18n="drawer.pod">Le podcast</span>
+    <button type="button" class="icon-btn" data-menu-close aria-label="Fermer le sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19" stroke="currentColor" stroke-width="2"/></svg></button>
+  </div>
+  <ol>
+    <li><a href="#episodes"><b data-i18n="pod.eps">Les épisodes</b><span>6</span></a></li>
+    <li><a href="#voix"><b data-i18n="pod.voices">Les voix</b><span>↓</span></a></li>
+    <li><a href="#proposer"><b data-i18n="pod.propose">Proposer un sujet</b><span>↓</span></a></li>
+    <li><a href="index.html"><b data-i18n="back.home">Retour à la Une</b><span>↩</span></a></li>
+  </ol>
+</div>
+
+<main id="contenu">
+<section class="article-hero pod-hero" aria-labelledby="pod-h1">
+  <div class="article-hero__bg" aria-hidden="true">
+    <figure class="media" data-dots><img data-grok="podcast-ouverture-studio" data-ratio="1.78" alt=""></figure>
+  </div>
+  <div class="wrap">
+    <div>
+      <div class="folio"><span class="label" data-i18n="pod.folio">Supplément audio · podcast</span><span class="label" data-i18n="pod.by">Présenté par Marco Gicquel</span></div>
+      <span class="kicker" data-i18n="pod.kicker">Un podcast Marco Investigation, avec Spotify</span>
+      <h1 id="pod-h1" style="margin:12px 0 40px">Engagement</h1>
+      <p class="lead" data-i18n="pod.lead">Échanges, réflexions, discussions. Un podcast pour échanger, réfléchir et amener à la réflexion autour de l’engagement : des personnalités plus ou moins connues, des étudiantes, des fondatrices, des tables rondes.</p>
+      <canvas class="wave" data-wave="hero" aria-hidden="true" style="color:#F5D547;margin:18px 0 8px"></canvas>
+      <div class="extract" data-extract-wrap>
+        <button type="button" class="extract__btn" data-extract="6" data-cursor="ecouter" aria-pressed="false" aria-label="Écouter la bande-annonce" style="background:var(--highlight);color:var(--ink);border-color:var(--highlight)">
+          <svg class="ring" viewBox="0 0 68 68" aria-hidden="true"><circle cx="34" cy="34" r="32"/></svg>
+          <svg class="i-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4l13 8-13 8z" fill="currentColor"/></svg>
+        </button>
+        <div>
+          <strong class="label" data-i18n="pod.trailer">Écouter la bande-annonce</strong>
+          <p class="extract__state" data-extract-state style="color:rgba(239,235,223,.75)" data-i18n="audio.state">Le son démarre seulement quand vous cliquez.</p>
+        </div>
+        <a class="btn btn--paper btn--sm" href="https://podcasters.spotify.com/pod/show/gicquel-marc0" target="_blank" rel="noopener" data-magnetic><span data-i18n="audio.spotify">Écouter sur Spotify</span></a>
+      </div>
+    </div>
+    <div class="pod-hero__cover">
+      <figure class="media" data-gl>
+        <img src="assets/img/podcast/couverture-engagement-960.webp" srcset="assets/img/podcast/couverture-engagement-480.webp 480w, assets/img/podcast/couverture-engagement-960.webp 960w, assets/img/podcast/couverture-engagement-1600.webp 1600w" sizes="(min-width: 980px) 36vw, 100vw" width="960" height="960" alt="Couverture rose du podcast ENGAGEMENT : « Échanges, réflexions, discussions », trois portraits en noir et blanc." fetchpriority="high">
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="episodes" aria-labelledby="eps-title">
+  <div class="wrap">
+    <div class="folio"><span class="label" data-i18n="pod.f1">Les épisodes</span><span class="label" data-i18n="pod.f1b">Extraits de 30 s · son au clic</span></div>
+    <div class="sec-head">
+      <h2 id="eps-title" data-i18n="pod.t1">Six conversations sur l’engagement</h2>
+      <p class="caption" data-i18n="pod.note">Les extraits démarrent à un moment choisi de chaque épisode. <span class="todo">Moments à choisir par Marco</span></p>
+    </div>
+    <ol class="episodes" data-episodes></ol>
+  </div>
+</section>
+
+<section class="section band-deep" id="voix" aria-labelledby="voix-title">
+  <div class="wrap">
+    <div class="folio"><span class="label" data-i18n="pod.f2">Les voix</span><span class="label" data-i18n="pod.f2b">Invitées et invités</span></div>
+    <div class="voices">
+      <figure class="media" data-gl><img data-grok="podcast-enregistreur" data-ratio="0.8" alt="Enregistreur audio portable posé sur une table de café, entre deux tasses."></figure>
+      <div>
+        <h2 id="voix-title" style="margin-bottom:22px" data-i18n="pod.t2">Ils et elles ont pris le micro</h2>
+        <ul class="voice-list">
+          <li data-fresh><strong>Isabelle Huppert</strong><span class="caption" data-i18n="vo.1">Conférence enregistrée aux 24h de Libé, Cité de la Musique, Paris.</span></li>
+          <li data-fresh><strong>Maelle</strong><span class="caption" data-i18n="vo.2">Étudiante, elle a alerté sur la précarité étudiante dans une vidéo TikTok.</span></li>
+          <li data-fresh><strong>Fanny</strong><span class="caption" data-i18n="vo.3">Fondatrice des Nouvelles Oratrices, pour aider les femmes à prendre la parole en public.</span></li>
+          <li data-fresh><strong data-i18n="vo.4t">Table ronde Nos Futurs</strong><span class="caption" data-i18n="vo.4">Festival organisé par Les Champs Libres en partenariat avec Le Monde. <span class="todo">Noms des intervenants à compléter</span></span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="proposer" aria-labelledby="prop-title">
+  <div class="wrap">
+    <div class="folio"><span class="label" data-i18n="pod.f3">Proposer un sujet</span><span class="label" data-i18n="pod.f3b">Courrier des auditeurs</span></div>
+    <div class="propose">
+      <div style="display:grid;gap:18px">
+        <h2 id="prop-title" data-i18n="pod.t3">Une voix à faire entendre ?</h2>
+        <p class="lead" data-i18n="pod.p3">Questions, remarques, idées d’invité·es : écrivez à l’adresse indiquée dans le podcast.</p>
+        <ul class="contact-list">
+          <li><span class="label" data-i18n="pod.mail">Adresse du podcast</span><span class="val">videos@marcoinvestigation.org</span><button type="button" class="copy-btn" data-copy="videos@marcoinvestigation.org" data-i18n="copy">Copier</button></li>
+        </ul>
+        <div class="btn-row"><a class="btn" href="index.html#courrier" data-magnetic><span data-i18n="pod.form">Utiliser le formulaire</span></a></div>
+      </div>
+      <figure class="media" data-dots><img data-grok="podcast-casque" data-ratio="1" alt="Casque audio posé sur une pile de papier journal vierge."></figure>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <p class="footer__mast" aria-hidden="true">Marco Investigation</p>
+    <div class="footer__cols">
+      <div><h2 data-i18n="f.read">Lire, voir, écouter</h2><ul><li><a href="index.html#enquetes" data-i18n="nav.enquetes">Enquêtes</a></li><li><a href="enquete-fast-fashion.html" data-i18n="f.ff">Enquête fast-fashion</a></li><li><a href="index.html#kiosque" data-i18n="nav.kiosque">Magazines</a></li></ul></div>
+      <div><h2 data-i18n="f.about">Le média</h2><ul><li><a href="index.html#portrait" data-i18n="nav.apropos">À propos</a></li><li><a href="index.html#presse" data-i18n="nav.presse">Presse</a></li><li><a href="index.html#courrier" data-i18n="nav.contact">Contact</a></li></ul></div>
+      <div><h2 data-i18n="f.settings">Réglages</h2><div style="display:flex;gap:8px;flex-wrap:wrap"><div class="lang-switch" role="group" aria-label="Langue / Language"><button type="button" data-lang="fr" aria-pressed="true">FR</button><button type="button" data-lang="en" aria-pressed="false">EN</button></div><button type="button" class="chip-btn" data-calm aria-pressed="false"><span data-i18n="calm">Mode calme</span></button></div></div>
+    </div>
+    <div class="footer__bottom"><span>© Marco Investigation · <a href="mentions-legales.html" data-i18n="f.legal">Mentions légales</a></span><span data-i18n="f.mock">Maquette : contenus repris du site actuel ; les éléments manquants sont marqués « à compléter ».</span></div>
+  </div>
+</footer>
+
+<div class="page-sheet" aria-hidden="true"></div>
+<div class="cursor" aria-hidden="true"><span></span></div>
+
+<script src="assets/js/vendor/gsap.min.js"></script>
+<script src="assets/js/vendor/ScrollTrigger.min.js"></script>
+<script src="assets/js/vendor/SplitText.min.js"></script>
+<script src="assets/js/vendor/Flip.min.js"></script>
+<script src="assets/js/vendor/lenis.min.js"></script>
+<script src="assets/js/vendor/ogl.min.js"></script>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/i18n.js"></script>
+<script src="assets/js/halftone.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
