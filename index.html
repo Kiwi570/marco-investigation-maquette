@@ -9,9 +9,17 @@
 <meta name="theme-color" content="#EFEBDF">
 <meta property="og:title" content="Marco Investigation">
 <meta property="og:description" content="Enquêtes, podcast, magazines et formations : un média de journalisme de solutions.">
-<meta property="og:image" content="assets/img/site/interview-ouverture-1600.webp">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:url" content="https://marco-investigation-maquette.vercel.app/">
+<meta property="og:image" content="https://marco-investigation-maquette.vercel.app/assets/img/site/og-marco-investigation.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="assets/img/site/favicon.png">
-<link rel="preload" href="assets/fonts/fraunces-var.woff" as="font" type="font/woff" crossorigin>
+<link rel="apple-touch-icon" href="assets/img/site/apple-touch-icon.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"NewsMediaOrganization","name":"Marco Investigation","url":"https://marco-investigation-maquette.vercel.app/","logo":"https://marco-investigation-maquette.vercel.app/assets/img/site/apple-touch-icon.png","foundingDate":"2021","founder":{"@type":"Person","name":"Marco Gicquel"},"email":"contact@marcoinvestigation.org","sameAs":["https://www.youtube.com/@marcoinvestigation","https://www.instagram.com/marcoinvestigation/","https://www.tiktok.com/@marco.investigation","https://podcasters.spotify.com/pod/show/gicquel-marc0"]}</script>
+<link rel="preload" href="assets/fonts/fraunces-var.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/css/fonts.css">
 <link rel="stylesheet" href="assets/css/main.css">
 </head>
@@ -86,7 +94,7 @@
         <ol>
           <li><a href="#edito"><span data-i18n="sum.edito2">Édito : dénoncer, puis chercher les solutions</span><span class="num">p. 2</span></a></li>
           <li><a href="#europe"><span data-i18n="sum.europe2">Dossier : la culture en Europe</span><span class="num">p. 3</span></a></li>
-          <li><a href="#enquetes"><span data-i18n="sum.enquetes2">29 vidéos, 6 épisodes, 2 magazines</span><span class="num">p. 4</span></a></li>
+          <li><a href="#enquetes"><span data-i18n="sum.enquetes2">Vidéos, podcast, magazines et formation</span><span class="num">p. 4</span></a></li>
           <li><a href="#audio"><span data-i18n="sum.audio2">Supplément audio</span><span class="num">p. 5</span></a></li>
           <li><a href="#kiosque"><span data-i18n="sum.kiosque2">Kiosque</span><span class="num">p. 6</span></a></li>
           <li><a href="#ecoles"><span data-i18n="sum.ecoles2">Écoles : formations gratuites</span><span class="num">p. 7</span></a></li>
@@ -117,7 +125,7 @@
         </div>
         <div class="btn-row">
           <a class="btn" href="#enquetes" data-magnetic><span data-i18n="une.cta1">Voir toutes les enquêtes</span></a>
-          <a class="btn btn--ghost" href="#courrier" data-magnetic><span data-i18n="une.cta2">S’abonner à la lettre</span></a>
+          <a class="btn btn--ghost" href="#lettre" data-magnetic><span data-i18n="une.cta2">S’abonner à la lettre</span></a>
         </div>
       </div>
 
@@ -128,7 +136,7 @@
             <img src="assets/img/site/interview-ouverture-960.webp" srcset="assets/img/site/interview-ouverture-480.webp 480w, assets/img/site/interview-ouverture-960.webp 960w" sizes="(min-width: 1000px) 24vw, 100vw" width="1079" height="600" alt="Marco face à un invité, en tournage d’interview sur fond sombre." loading="lazy">
           </figure>
           <h3 data-i18n="side.t1">Des invités, un micro, des questions franches</h3>
-          <p class="caption" data-i18n="side.c1">Albina du Boisrouvray, Geneviève Fraisse, Charlotte Lemay, Anna Kudinova…</p>
+          <p class="caption" data-i18n="side.c1">Albina du Boisrouvray, Charlotte Lemay, Laurence Dezélée, Anna Kudinova…</p>
         </article>
         <article class="side-card side-card--podcast">
           <figure class="media" data-dots>
@@ -167,6 +175,7 @@
       <span class="ticker__item" data-i18n="tk.5">À la Une d’Ici Rennes pour le festival Nos Futurs</span>
     </div>
   </div>
+  <button type="button" class="pause-btn" data-pause aria-pressed="false" aria-label="Mettre en pause ou reprendre le défilement"><svg class="i-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h4v14H7zM13 5h4v14h-4z" fill="currentColor"/></svg><svg class="i-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4l13 8-13 8z" fill="currentColor"/></svg></button>
 </div>
 
 <!-- p. 2 · ÉDITO -->
@@ -176,7 +185,7 @@
     <div class="edito__grid">
       <div class="edito__visual">
         <figure class="media" data-gl>
-          <img data-grok="accueil-redaction-bureau" data-ratio="0.8" alt="Bureau de rédaction en fin de journée : carnet ouvert, stylo, enregistreur, journaux pliés.">
+          <img data-grok="accueil-redaction-bureau" data-sizes="(min-width: 980px) 42vw, 100vw" data-ratio="0.8" alt="Bureau de rédaction en fin de journée : carnet ouvert, stylo, enregistreur, journaux pliés.">
         </figure>
         <div class="edito__portrait">
           <figure class="media" data-dots>
@@ -248,6 +257,7 @@
     </div>
     <div class="cards" data-cards></div>
     <div class="more"><button type="button" class="btn btn--ghost" data-more data-magnetic><span data-i18n="enq.more">Afficher toutes les enquêtes</span></button></div>
+    <p class="cat-note" data-i18n="enq.note">Toutes les vidéos sont aussi sur la <a class="link" href="https://www.youtube.com/@marcoinvestigation" target="_blank" rel="noopener">chaîne YouTube</a>.</p>
     <div class="btn-row" style="margin-top:44px;justify-content:center">
       <a class="btn" href="enquete-fast-fashion.html" data-magnetic><span data-i18n="enq.page">Lire l’enquête fast-fashion en entier</span></a>
     </div>
@@ -274,7 +284,7 @@
           </button>
           <div>
             <strong class="label" data-i18n="audio.listen">Écouter un extrait · 30 s</strong>
-            <p class="extract__state" data-extract-state data-i18n="audio.state">Le son démarre seulement quand vous cliquez.</p>
+            <p class="extract__state" data-extract-state aria-live="polite" data-i18n="audio.state">Le son démarre seulement quand vous cliquez.</p>
           </div>
         </div>
         <div class="btn-row">
@@ -284,7 +294,7 @@
       </div>
       <div class="audio__mic">
         <figure class="media" data-dots>
-          <img data-grok="accueil-studio-micro" data-ratio="0.8" alt="Micro de podcast sur bras articulé dans un petit studio chaleureux.">
+          <img data-grok="accueil-studio-micro" data-sizes="(min-width: 980px) 22vw, 100vw" data-ratio="0.8" alt="Micro de podcast sur bras articulé dans un petit studio chaleureux.">
         </figure>
       </div>
     </div>
@@ -362,7 +372,7 @@
           <p class="lead" data-i18n="ecoles.lead">Des formations gratuites et libres de droits, pour que les écoles qui le souhaitent abordent avec leurs élèves les thèmes de nos enquêtes.</p>
         </div>
         <figure class="media ecoles__photo" data-gl>
-          <img data-grok="accueil-ecoles-classe" data-ratio="1.78" alt="Salle de classe vide le matin, tableau vert vierge, lumière par les grandes fenêtres.">
+          <img data-grok="accueil-ecoles-classe" data-sizes="(min-width: 980px) 55vw, 100vw" data-ratio="1.78" alt="Salle de classe vide le matin, tableau vert vierge, lumière par les grandes fenêtres.">
         </figure>
         <div class="copies">
           <article class="copy">
@@ -464,7 +474,7 @@
           <span class="kicker">NowU</span>
           <h3 data-i18n="pr3.t">Ciao la fast-fashion</h3>
           <p data-i18n="pr3.p">Marco Investigation chez NowU pour parler de fast-fashion et des alternatives qui existent.</p>
-          <button type="button" class="link label" style="background-color:transparent;border:0;padding:0;cursor:pointer;justify-self:start" data-video="yhSH3uwgIL0" data-i18n="pr3.l">Voir l’interview</button>
+          <button type="button" class="link label" style="background-color:transparent;border:0;padding:5px 0;cursor:pointer;justify-self:start" data-video="yhSH3uwgIL0" data-i18n="pr3.l">Voir l’interview</button>
         </article>
         <article class="clip">
           <span class="stamp" data-stamp data-i18n="stamp.paru">Paru dans</span>
@@ -479,7 +489,7 @@
     <div class="press__contact">
       <div>
         <span class="label" data-i18n="presse.contact">Service presse</span>
-        <p class="val" style="font-family:var(--f-display);font-weight:700;font-size:1.4rem;user-select:all">pr@marcoinvestigation.org</p>
+        <p class="val" style="font-family:var(--f-display);font-weight:700;font-size:1.4rem;user-select:all">pr@<wbr>marcoinvestigation.org</p>
       </div>
       <button type="button" class="copy-btn" data-copy="pr@marcoinvestigation.org" data-i18n="copy">Copier</button>
       <p style="flex:1 1 300px" data-i18n="presse.kit">Kit média en français et en anglais : accès sur demande auprès du service presse.</p>
@@ -494,11 +504,12 @@
     <div class="folio"><span class="label" data-i18n="part.folio">Ils nous accompagnent</span><span class="label num">p. 9</span></div>
     <h2 id="part-title" class="sr-only" data-i18n="part.title">Partenaires</h2>
   </div>
-  <div class="marquee" aria-label="Rennes Métropole, MSA, Familles Rurales, Ville de Paris, L’Académie du Climat, ChangeNOW, YouTube Shorts, TikTok for Business">
+  <div class="marquee" role="group" aria-label="Rennes Métropole, MSA, Familles Rurales, Ville de Paris, L’Académie du Climat, ChangeNOW, YouTube Shorts, TikTok for Business">
     <div class="marquee__track">
       <div class="marquee__group" style="display:flex"><span class="marquee__item">Rennes Métropole</span><span class="marquee__item">MSA</span><span class="marquee__item">Familles Rurales</span><span class="marquee__item">Ville de Paris</span><span class="marquee__item">L’Académie du Climat</span><span class="marquee__item">ChangeNOW</span><span class="marquee__item">YouTube Shorts</span><span class="marquee__item">TikTok for Business</span></div>
       <div class="marquee__group" style="display:flex" aria-hidden="true"><span class="marquee__item">Rennes Métropole</span><span class="marquee__item">MSA</span><span class="marquee__item">Familles Rurales</span><span class="marquee__item">Ville de Paris</span><span class="marquee__item">L’Académie du Climat</span><span class="marquee__item">ChangeNOW</span><span class="marquee__item">YouTube Shorts</span><span class="marquee__item">TikTok for Business</span></div>
     </div>
+    <button type="button" class="pause-btn" data-pause aria-pressed="false" aria-label="Mettre en pause ou reprendre le défilement"><svg class="i-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h4v14H7zM13 5h4v14h-4z" fill="currentColor"/></svg><svg class="i-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4l13 8-13 8z" fill="currentColor"/></svg></button>
   </div>
   <div class="wrap">
     <figure class="media partners__logos" style="aspect-ratio:2/1">
@@ -545,14 +556,14 @@
     <div class="courrier__grid">
       <div>
         <figure class="media courrier__photo" data-dots>
-          <img data-grok="accueil-courrier-carnet" data-ratio="1.78" alt="Enveloppes vierges, papier à lettres et stylo plume sur une table en bois sombre.">
+          <img data-grok="accueil-courrier-carnet" data-sizes="(min-width: 980px) 42vw, 100vw" data-ratio="1.78" alt="Enveloppes vierges, papier à lettres et stylo plume sur une table en bois sombre.">
         </figure>
         <h2 id="courrier-title" data-i18n="courrier.title">Écrivez à la rédaction</h2>
         <p class="lead" style="margin:16px 0 22px" data-i18n="courrier.lead">Une idée d’enquête, une intervention, un partenariat : on lit tout.</p>
         <ul class="contact-list">
-          <li><span class="label" data-i18n="c.mail">E-mail</span><span class="val">contact@marcoinvestigation.org</span><button type="button" class="copy-btn" data-copy="contact@marcoinvestigation.org" data-i18n="copy">Copier</button></li>
+          <li><span class="label" data-i18n="c.mail">E-mail</span><span class="val">contact@<wbr>marcoinvestigation.org</span><button type="button" class="copy-btn" data-copy="contact@marcoinvestigation.org" data-i18n="copy">Copier</button></li>
           <li><span class="label" data-i18n="c.tel">Téléphone</span><span class="val num">06 56 67 63 78</span><button type="button" class="copy-btn" data-copy="06 56 67 63 78" data-i18n="copy">Copier</button></li>
-          <li><span class="label" data-i18n="c.press">Presse</span><span class="val">pr@marcoinvestigation.org</span><button type="button" class="copy-btn" data-copy="pr@marcoinvestigation.org" data-i18n="copy">Copier</button></li>
+          <li><span class="label" data-i18n="c.press">Presse</span><span class="val">pr@<wbr>marcoinvestigation.org</span><button type="button" class="copy-btn" data-copy="pr@marcoinvestigation.org" data-i18n="copy">Copier</button></li>
         </ul>
         <p class="caption" style="margin-top:10px" data-i18n="c.intl">Appels internationaux acceptés : contactez-nous pour la prise en charge des frais.</p>
         <div class="socials">
@@ -600,7 +611,7 @@
         </form>
       </div>
     </div>
-    <div class="newsletter">
+    <div class="newsletter" id="lettre">
       <h3 style="font-size:clamp(1.6rem,3vw,2.4rem)" data-i18n="nl.t">Restez dans le coup.</h3>
       <p data-i18n="nl.p">Les nouvelles enquêtes et les épisodes du podcast, une fois par mois.</p>
       <form data-newsletter novalidate>
@@ -632,7 +643,7 @@
       </div>
     </div>
     <div class="footer__bottom">
-      <span>© Marco Investigation · <a href="mentions-legales.html" data-i18n="f.legal">Mentions légales</a></span>
+      <span>© Marco Investigation · <a href="mentions-legales.html" data-i18n="f.legal">Mentions légales</a> · <a class="to-top" href="#une" data-i18n="f.top">Retour à la Une ↑</a></span>
       <span data-i18n="f.mock">Maquette : contenus repris du site actuel ; les éléments manquants sont marqués « à compléter ».</span>
     </div>
   </div>

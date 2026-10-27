@@ -7,8 +7,18 @@
 <meta name="claude:viewport-fit-sides" content="cover">
 <meta name="description" content="ENGAGEMENT, le podcast de Marco Investigation présenté par Marco Gicquel : échanges, réflexions, discussions. Six épisodes, avec des extraits à écouter.">
 <meta name="theme-color" content="#17140F">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="ENGAGEMENT, le podcast de Marco Investigation">
+<meta property="og:description" content="Échanges, réflexions, discussions : six épisodes à écouter, avec des extraits de 30 secondes.">
+<meta property="og:url" content="https://marco-investigation-maquette.vercel.app/podcast">
+<meta property="og:image" content="https://marco-investigation-maquette.vercel.app/assets/img/site/og-podcast.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="assets/img/site/favicon.png">
-<link rel="preload" href="assets/fonts/fraunces-var.woff" as="font" type="font/woff" crossorigin>
+<link rel="apple-touch-icon" href="assets/img/site/apple-touch-icon.png">
+<link rel="preload" href="assets/fonts/fraunces-var.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/css/fonts.css">
 <link rel="stylesheet" href="assets/css/main.css">
 </head>
@@ -57,7 +67,7 @@
 <main id="contenu">
 <section class="article-hero pod-hero" aria-labelledby="pod-h1">
   <div class="article-hero__bg" aria-hidden="true">
-    <figure class="media" data-dots><img data-grok="podcast-ouverture-studio" data-ratio="1.78" alt=""></figure>
+    <figure class="media" data-dots><img data-grok="podcast-ouverture-studio" data-sizes="100vw" data-ratio="1.78" alt=""></figure>
   </div>
   <div class="wrap">
     <div>
@@ -73,7 +83,7 @@
         </button>
         <div>
           <strong class="label" data-i18n="pod.trailer">Écouter la bande-annonce</strong>
-          <p class="extract__state" data-extract-state style="color:rgba(239,235,223,.75)" data-i18n="audio.state">Le son démarre seulement quand vous cliquez.</p>
+          <p class="extract__state" data-extract-state aria-live="polite" style="color:rgba(239,235,223,.75)" data-i18n="audio.state">Le son démarre seulement quand vous cliquez.</p>
         </div>
         <a class="btn btn--paper btn--sm" href="https://podcasters.spotify.com/pod/show/gicquel-marc0" target="_blank" rel="noopener" data-magnetic><span data-i18n="audio.spotify">Écouter sur Spotify</span></a>
       </div>
@@ -101,7 +111,7 @@
   <div class="wrap">
     <div class="folio"><span class="label" data-i18n="pod.f2">Les voix</span><span class="label" data-i18n="pod.f2b">Invitées et invités</span></div>
     <div class="voices">
-      <figure class="media" data-gl><img data-grok="podcast-enregistreur" data-ratio="0.8" alt="Enregistreur audio portable posé sur une table de café, entre deux tasses."></figure>
+      <figure class="media" data-gl><img data-grok="podcast-enregistreur" data-sizes="(min-width: 900px) 33vw, 100vw" data-ratio="0.8" alt="Enregistreur audio portable posé sur une table de café, entre deux tasses."></figure>
       <div>
         <h2 id="voix-title" style="margin-bottom:22px" data-i18n="pod.t2">Ils et elles ont pris le micro</h2>
         <ul class="voice-list">
@@ -123,11 +133,11 @@
         <h2 id="prop-title" data-i18n="pod.t3">Une voix à faire entendre ?</h2>
         <p class="lead" data-i18n="pod.p3">Questions, remarques, idées d’invité·es : écrivez à l’adresse indiquée dans le podcast.</p>
         <ul class="contact-list">
-          <li><span class="label" data-i18n="pod.mail">Adresse du podcast</span><span class="val">videos@marcoinvestigation.org</span><button type="button" class="copy-btn" data-copy="videos@marcoinvestigation.org" data-i18n="copy">Copier</button></li>
+          <li><span class="label" data-i18n="pod.mail">Adresse du podcast</span><span class="val">videos@<wbr>marcoinvestigation.org</span><button type="button" class="copy-btn" data-copy="videos@marcoinvestigation.org" data-i18n="copy">Copier</button></li>
         </ul>
         <div class="btn-row"><a class="btn" href="index.html#courrier" data-magnetic><span data-i18n="pod.form">Utiliser le formulaire</span></a></div>
       </div>
-      <figure class="media" data-dots><img data-grok="podcast-casque" data-ratio="1" alt="Casque audio posé sur une pile de papier journal vierge."></figure>
+      <figure class="media" data-dots><img data-grok="podcast-casque" data-sizes="(min-width: 860px) 40vw, 100vw" data-ratio="1" alt="Casque audio posé sur une pile de papier journal vierge."></figure>
     </div>
   </div>
 </section>

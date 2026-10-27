@@ -1,35 +1,28 @@
-/* Polices hébergées avec le site (sous-ensembles latin, variables) */
+/* Polices hébergées avec le site (WOFF2, sous-ensembles latin, variables) */
 @font-face {
   font-family: "Fraunces";
-  src: url("../fonts/fraunces-var.woff") format("woff");
+  src: url("../fonts/fraunces-var.woff2") format("woff2");
   font-weight: 100 900;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Fraunces";
-  src: url("../fonts/fraunces-italic-var.woff") format("woff");
+  src: url("../fonts/fraunces-italic-var.woff2") format("woff2");
   font-weight: 100 900;
   font-style: italic;
   font-display: swap;
 }
 @font-face {
   font-family: "Inter Tight";
-  src: url("../fonts/intertight-var.woff") format("woff");
+  src: url("../fonts/intertight-var.woff2") format("woff2");
   font-weight: 100 900;
   font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Inter Tight";
-  src: url("../fonts/intertight-italic-var.woff") format("woff");
-  font-weight: 100 900;
-  font-style: italic;
   font-display: swap;
 }
 @font-face {
   font-family: "Caveat";
-  src: url("../fonts/caveat-var.woff") format("woff");
+  src: url("../fonts/caveat-var.woff2") format("woff2");
   font-weight: 400 700;
   font-style: normal;
   font-display: swap;

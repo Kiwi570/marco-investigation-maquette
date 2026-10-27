@@ -99,6 +99,14 @@
   /* ---------- Sommaire (menu) ---------- */
   const drawer = $("#drawer");
   const menuBtn = $("[data-menu]");
+  if (drawer) { drawer.setAttribute("role", "dialog"); drawer.setAttribute("aria-modal", "true"); const t = $(".drawer__top .label", drawer); if (t) { t.id = "drawer-title"; drawer.setAttribute("aria-labelledby", "drawer-title"); } }
+  document.addEventListener("keydown", e => {
+    if (e.key !== "Tab" || !drawer || drawer.hidden) return;
+    const f = $$("a[href], button", drawer).filter(x => x.offsetParent !== null);
+    if (!f.length) return;
+    if (e.shiftKey && document.activeElement === f[0]) { e.preventDefault(); f[f.length - 1].focus(); }
+    else if (!e.shiftKey && document.activeElement === f[f.length - 1]) { e.preventDefault(); f[0].focus(); }
+  });
   function openDrawer() {
     if (!drawer) return;
     drawer.hidden = false; menuBtn.setAttribute("aria-expanded", "true");
@@ -115,6 +123,42 @@
   if (menuBtn) menuBtn.addEventListener("click", openDrawer);
   $$("[data-menu-close]").forEach(b => b.addEventListener("click", closeDrawer));
   document.addEventListener("keydown", e => { if (e.key === "Escape") closeDrawer(); });
+
+  /* ---------- En-tête : se range en lisant, revient en remontant ---------- */
+  const header = $(".site-header");
+  const progressEl = header && page === "enquete" ? (() => { const p = document.createElement("span"); p.className = "read-progress"; p.setAttribute("aria-hidden", "true"); header.appendChild(p); return p; })() : null;
+  if (header) {
+    let lastY = window.scrollY;
+    const onScroll = () => {
+      const y = window.scrollY;
+      if (!MI.calm && (!drawer || drawer.hidden)) {
+        if (y < 240 || y < lastY - 6) header.classList.remove("is-hidden");
+        else if (y > lastY + 6 && !header.contains(document.activeElement)) header.classList.add("is-hidden");
+      }
+      lastY = y;
+      if (progressEl) { const h = document.documentElement.scrollHeight - window.innerHeight; progressEl.style.transform = "scaleX(" + (h > 0 ? Math.min(1, y / h) : 0) + ")"; }
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    header.addEventListener("focusin", () => header.classList.remove("is-hidden"));
+  }
+  if (page === "home" && window.IntersectionObserver) {
+    const links = $$(".site-header .nav a[href^='#']");
+    const map = new Map();
+    links.forEach(a => { const sec = document.getElementById(a.getAttribute("href").slice(1)); if (sec) map.set(sec, a); });
+    const spy = new IntersectionObserver(entries => entries.forEach(en => {
+      const a = map.get(en.target); if (!a) return;
+      if (en.isIntersecting) { links.forEach(l => l.classList.remove("is-active")); a.classList.add("is-active"); }
+      else a.classList.remove("is-active");
+    }), { rootMargin: "-45% 0px -50% 0px" });
+    map.forEach((a, sec) => spy.observe(sec));
+  }
+
+  /* ---------- Bandeaux défilants : pause ---------- */
+  $$("[data-pause]").forEach(btn => btn.addEventListener("click", () => {
+    const host = btn.closest(".ticker, .marquee");
+    const paused = host.classList.toggle("is-paused");
+    btn.setAttribute("aria-pressed", paused ? "true" : "false");
+  }));
 
   /* ---------- Liens vers les documents (locaux sur le site, d'origine dans l'aperçu) ---------- */
   $$("[data-doc]").forEach(a => {
@@ -172,9 +216,16 @@
   /* ---------- Images ---------- */
   if (MI.initGrokImages) MI.initGrokImages();
   const glFigures = [];
+  const glObserver = window.IntersectionObserver && !MI.calm ? new IntersectionObserver(entries => entries.forEach(en => {
+    if (!en.isIntersecting) return;
+    glObserver.unobserve(en.target);
+    const rec = glFigures.find(g => g.fig === en.target);
+    if (rec && !rec.api && MI.initHalftone) rec.api = MI.initHalftone(en.target, { auto: true, fallback: true });
+  }), { rootMargin: "400px 0px" }) : null;
   $$(".media[data-gl]").forEach(fig => {
     const manual = fig.hasAttribute("data-gl-manual");
-    glFigures.push({ fig, api: MI.initHalftone ? MI.initHalftone(fig, { auto: !manual, fallback: !manual }) : null });
+    if (manual || !glObserver) glFigures.push({ fig, api: MI.initHalftone ? MI.initHalftone(fig, { auto: !manual, fallback: !manual }) : null });
+    else { glFigures.push({ fig, api: null }); glObserver.observe(fig); }
   });
   if (hasGsap && !MI.calm) {
     $$(".media[data-dots]").forEach(fig => {
@@ -317,6 +368,18 @@
   MI.audio = (function () {
     const el = new Audio(); el.preload = "none";
     let cur = null, btn = null, stopTimer = 0;
+    const pill = document.createElement("div");
+    pill.className = "now-playing"; pill.hidden = true; pill.setAttribute("role", "status");
+    pill.innerHTML = '<span class="now-playing__eq" aria-hidden="true"><i></i><i></i><i></i></span><span class="now-playing__txt"><span class="label now-playing__k"></span><span class="now-playing__t"></span></span><button type="button" class="now-playing__stop"></button>';
+    document.body.appendChild(pill);
+    $(".now-playing__stop", pill).addEventListener("click", () => stop());
+    function showPill(ep) {
+      $(".now-playing__k", pill).textContent = MI.t("np.k", "Extrait en cours");
+      $(".now-playing__t", pill).textContent = ep.t;
+      $(".now-playing__stop", pill).textContent = MI.t("np.stop", "Arrêter");
+      pill.hidden = false;
+      if (hasGsap && !MI.calm) gsap.fromTo(pill, { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.45, ease: "power3.out" });
+    }
     const LEN = 30;
     function setState(b, text, err) {
       const wrap = b && (b.closest("[data-extract-wrap]") || b.parentElement);
@@ -327,6 +390,7 @@
     function icon(b, playing) { const s = b && $(".i-play", b); if (s) s.innerHTML = playing ? '<path d="M7 5h4v14H7zM13 5h4v14h-4z" fill="currentColor"/>' : '<path d="M7 4l13 8-13 8z" fill="currentColor"/>'; }
     function stop(silent) {
       el.pause(); clearTimeout(stopTimer);
+      pill.hidden = true;
       if (btn) { ring(btn, 0); icon(btn, false); btn.setAttribute("aria-pressed", "false"); const row = btn.closest(".ep"); if (row) row.classList.remove("is-playing"); if (!silent) setState(btn, MI.t("audio.again", "Extrait terminé. Cliquez pour le réécouter.")); }
       if (cur) MI.waves.level(String(cur.n), 0.18); MI.waves.level("hero", 0.18);
       cur = null; btn = null;
@@ -342,6 +406,7 @@
         try { el.currentTime = start; } catch (e) { /* position non disponible */ }
         el.play().then(() => {
           setState(b, MI.t("audio.playing", "Lecture de l’extrait (30 s)"));
+          showPill(ep);
           MI.waves.level(String(ep.n), 0.85); MI.waves.level("hero", 0.85);
           stopTimer = setTimeout(() => stop(), LEN * 1000 + 400);
         }).catch(fail);
@@ -693,12 +758,15 @@
   function journey() {
     const sec = $("[data-journey]"); if (!sec || !hasGsap || MI.calm) return;
     if (!window.matchMedia("(min-width: 761px)").matches) return;
-    const track = $(".journey__track", sec), bar = $(".journey__progress span", sec);
-    const dist = () => Math.max(0, track.scrollWidth - sec.querySelector(".wrap").clientWidth + 40);
-    gsap.to(track, {
-      x: () => -dist(), ease: "none",
-      scrollTrigger: { trigger: sec, start: "top 12%", end: () => "+=" + dist(), pin: true, scrub: 0.6, invalidateOnRefresh: true, anticipatePin: 1,
-        onUpdate: self => { if (bar) bar.style.transform = "scaleX(" + self.progress + ")"; } }
+    const sticky = $(".journey__sticky", sec), track = $(".journey__track", sec), bar = $(".journey__progress span", sec), wrap = $(".wrap", sec);
+    if (!sticky) return;
+    sec.classList.add("is-sticky");
+    const dist = () => Math.max(0, track.scrollWidth - wrap.clientWidth + 40);
+    const size = () => { sec.style.height = (window.innerHeight + dist()) + "px"; };
+    size();
+    ScrollTrigger.create({
+      trigger: sec, start: "top top", end: "bottom bottom", scrub: true, invalidateOnRefresh: true, onRefreshInit: size,
+      onUpdate: self => { gsap.set(track, { x: -dist() * self.progress }); if (bar) bar.style.transform = "scaleX(" + self.progress + ")"; }
     });
   }
   function fixes() {
@@ -766,7 +834,7 @@
           '<div class="ep__actions" data-extract-wrap>' +
           '<button type="button" class="extract__btn" data-extract="' + ep.n + '" data-cursor="ecouter" aria-pressed="false" aria-label="' + MI.t("audio.aria", "Écouter un extrait de 30 secondes") + " : " + ep.t.replace(/"/g, "") + '"><svg class="ring" viewBox="0 0 68 68" aria-hidden="true"><circle cx="34" cy="34" r="32"/></svg><svg class="i-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4l13 8-13 8z" fill="currentColor"/></svg></button>' +
           '<canvas class="ep__wave" data-wave="' + ep.n + '" aria-hidden="true"></canvas>' +
-          '<span class="extract__state" data-extract-state>' + (ep.n === 6 ? MI.t("ep.trailer", "Bande-annonce : 30 premières secondes") : MI.t("ep.extract", "Extrait de 30 s")) + "</span>" +
+          '<span class="extract__state" data-extract-state aria-live="polite">' + (ep.n === 6 ? MI.t("ep.trailer", "Bande-annonce : 30 premières secondes") : MI.t("ep.extract", "Extrait de 30 s")) + "</span>" +
           '<a class="btn btn--ghost btn--sm" href="' + ep.url + '" target="_blank" rel="noopener">Spotify ↗</a>' +
           "</div></div></li>";
       }).join("");

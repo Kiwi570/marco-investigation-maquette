@@ -10,13 +10,13 @@
     "ear.left": "Independent media · investigation &amp; solutions", "ear.right": "Price: free · since 2021",
     "tag.1": "Video investigations", "tag.2": "ENGAGEMENT podcast", "tag.3": "Magazines", "tag.4": "Free teaching kits for schools",
     "sum.title": "In this issue",
-    "sum.edito2": "Editorial: expose, then look for solutions", "sum.europe2": "Special report: culture in Europe", "sum.enquetes2": "29 videos, 6 episodes, 2 magazines", "sum.audio2": "Audio supplement", "sum.kiosque2": "Newsstand", "sum.ecoles2": "Schools: free teaching kits", "sum.presse2": "In the press", "sum.portrait2": "Profile of the founder", "sum.courrier2": "Letters to the editor",
+    "sum.edito2": "Editorial: expose, then look for solutions", "sum.europe2": "Special report: culture in Europe", "sum.enquetes2": "Videos, podcast, magazines and teaching kit", "sum.audio2": "Audio supplement", "sum.kiosque2": "Newsstand", "sum.ecoles2": "Schools: free teaching kits", "sum.presse2": "In the press", "sum.portrait2": "Profile of the founder", "sum.courrier2": "Letters to the editor",
     "une.title": "We have the power to change the world!",
     "une.kicker": "Front page · latest video",
     "une.lead1": "Marco Investigation reports on today’s society: consumerism, discrimination, the economy, culture… and on the alternatives that could make the world better.",
     "une.lead2": "Investigations that expose sometimes shocking practices, followed by solutions for a better tomorrow. On video, as a podcast, in print and in the classroom.",
     "une.cta1": "See all investigations", "une.cta2": "Subscribe to the newsletter",
-    "side.k1": "In-depth interviews", "side.t1": "Guests, a microphone, straight questions", "side.c1": "Albina du Boisrouvray, Geneviève Fraisse, Charlotte Lemay, Anna Kudinova…",
+    "side.k1": "In-depth interviews", "side.t1": "Guests, a microphone, straight questions", "side.c1": "Albina du Boisrouvray, Charlotte Lemay, Laurence Dezélée, Anna Kudinova…",
     "side.k2": "Podcast", "side.t2": "Engagement: is it a generational thing?",
     "side.k3": "For schools", "side.t3": "A free, royalty-free teaching kit on fast fashion", "side.l3": "See the materials",
     "ticker": "Newsflash",
@@ -28,7 +28,7 @@
     "europe.folio": "Special report · latest project", "europe.cap": "Visual from the “Voyage Capital(e)” project, #DiscoverEU.", "europe.kicker": "Discover our latest project", "europe.title": "Culture in Europe",
     "europe.lead": "A partnership with more than 20 partners for a video series on culture in Europe.", "europe.cta": "Watch the videos", "europe.todo": "Full list of partners to be added",
     "enq.folio": "Investigations · video, podcast, magazine, teaching kit", "enq.title": "All investigations", "enq.lead": "Pick a theme or a format. Videos open right here, without leaving the page.",
-    "enq.more": "Show all investigations", "enq.page": "Read the full fast-fashion investigation",
+    "enq.more": "Show all investigations", "enq.note": "Videos and podcast episodes are in French. All videos are also on the <a class=\"link\" href=\"https://www.youtube.com/@marcoinvestigation\" target=\"_blank\" rel=\"noopener\">YouTube channel</a>.", "enq.page": "Read the full fast-fashion investigation",
     "audio.folio": "Audio supplement · ENGAGEMENT podcast", "audio.kicker": "Latest episode · 23 March 2024 · 48 min", "audio.title": "Engagement: is it a generational thing?",
     "audio.p": "How and why should we get involved? A round table recorded at the Nos Futurs festival, organised with the newspaper Le Monde.",
     "audio.listen": "Listen to a 30-second extract", "audio.state": "Sound only starts when you click.", "audio.all": "All 6 episodes", "audio.spotify": "Listen on Spotify",
@@ -71,7 +71,7 @@
     "cf.k": "Form", "cf.t": "Your message", "cf.subject": "Subject", "cf.s1": "Suggest a topic", "cf.s2": "School visit", "cf.s3": "Press and media kit", "cf.s4": "Partnership", "cf.s5": "Other",
     "cf.msg": "Message", "cf.tel": "Phone (optional)", "cf.send": "Send", "cf.stamp": "Letter<br>received", "cf.done": "Thank you! The newsroom will reply by email.",
     "nl.t": "Stay in the loop.", "nl.p": "New investigations and podcast episodes, once a month.", "nl.btn": "Subscribe", "nl.todo": "Sending frequency to be confirmed", "nl.stamp": "Subscribed",
-    "f.read": "Read, watch, listen", "f.ff": "Fast-fashion investigation", "f.about": "The outlet", "f.follow": "Follow", "f.settings": "Settings", "f.legal": "Legal notice",
+    "f.read": "Read, watch, listen", "f.ff": "Fast-fashion investigation", "f.about": "The outlet", "f.follow": "Follow", "f.settings": "Settings", "f.legal": "Legal notice", "f.top": "Back to the front page ↑", "lg.us": "United States", "np.k": "Now playing", "np.stop": "Stop",
     "f.mock": "Mock-up: content taken from the current site; missing items are marked “to be added”.",
     "player.note": "Played through YouTube without tracking cookies.", "player.yt": "Open on YouTube",
     "player.preview": "In this preview, the video opens on YouTube. On the live site, it plays here.",
@@ -148,8 +148,47 @@
     "Partenaires cités sur le visuel du projet": "Partners named on the project visual",
     "Couverture provisoire du magazine sur la fast-fashion": "Temporary cover of the fast-fashion magazine",
     "Carte de l’Europe tracée à l’encre, avec Amsterdam, Prague, Vienne et Lyon, villes des partenaires du projet.": "Ink map of Europe showing Amsterdam, Prague, Vienna and Lyon, home cities of the project partners.",
-    "votre@email.fr": "your@email.com"
+    "votre@email.fr": "your@email.com",
+    "Mettre en pause ou reprendre le défilement": "Pause or resume the scrolling text",
+    "Sommaire": "Contents",
+    "Salaires cités dans la formation : Chine 291 euros, Bangladesh 82 euros, Éthiopie 23 euros.": "Wages cited in the teaching kit: China 291 euros, Bangladesh 82 euros, Ethiopia 23 euros.",
+    "Rennes Métropole, MSA, Familles Rurales, Ville de Paris, L’Académie du Climat, ChangeNOW, YouTube Shorts, TikTok for Business": "Partners: Rennes Métropole, MSA, Familles Rurales, Ville de Paris, L’Académie du Climat, ChangeNOW, YouTube Shorts, TikTok for Business",
+    /* textes alternatifs des images */
+    "Miniature de la vidéo Melpomène : la réalisatrice Charlotte Dauphin dans un jardin, titre « La psychiatrie et le deuil ».": "Thumbnail of the Melpomène video: director Charlotte Dauphin in a garden, titled “Psychiatry and grief”.",
+    "Marco face à un invité, en tournage d’interview sur fond sombre.": "Marco facing a guest while filming an interview against a dark background.",
+    "Couverture de l’épisode : table ronde Nos Futurs, avec Le Monde et Les Champs Libres.": "Episode cover: Nos Futurs round table, with Le Monde and Les Champs Libres.",
+    "Bureau de rédaction en fin de journée : carnet ouvert, stylo, enregistreur, journaux pliés.": "Newsroom desk at the end of the day: open notebook, pen, recorder, folded newspapers.",
+    "Marco Gicquel, fondateur, en veste à fines rayures devant une plante.": "Marco Gicquel, founder, in a pinstripe jacket in front of a plant.",
+    "Concert de musique classique dans une église baroque, visuel du projet Voyage Capital(e) avec les logos des partenaires.": "Classical concert in a baroque church, visual of the Voyage Capital(e) project with partner logos.",
+    "Couverture de l’épisode Engagement, est-ce une affaire de génération : table ronde au festival Nos Futurs.": "Cover of the episode “Engagement: is it a generational thing?”: round table at the Nos Futurs festival.",
+    "Micro de podcast sur bras articulé dans un petit studio chaleureux.": "Podcast microphone on a boom arm in a small, warm studio.",
+    "Couverture du magazine « Le monde lutte pour le climat », printemps 2021, avec un globe terrestre.": "Cover of the magazine “Le monde lutte pour le climat”, spring 2021, showing a globe.",
+    "Salle de classe vide le matin, tableau vert vierge, lumière par les grandes fenêtres.": "Empty classroom in the morning, blank green chalkboard, light through tall windows.",
+    "Première page du diaporama « La fast fashion » : un portant de vêtements dessiné.": "First slide of the “Fast fashion” deck: a drawn clothes rack.",
+    "Fiche récapitulative « La fast-fashion » : définition, Rana Plaza, chaîne de production.": "“Fast fashion” summary sheet: definition, Rana Plaza, production chain.",
+    "Une du magazine Ici Rennes de mars 2024 : « Nos futurs, place à la relève ! », avec Marco en photo.": "Cover of Ici Rennes magazine, March 2024: “Nos futurs, place à la relève!”, with Marco in the photo.",
+    "Marco montre sa carte de presse jeune.": "Marco shows his youth press card.",
+    "Miniature « Interview NowU ».": "“NowU interview” thumbnail.",
+    "Photo en noir et blanc de Marco et deux amies, magazine ouvert entre les mains.": "Black-and-white photo of Marco and two friends holding an open magazine.",
+    "Logos des partenaires : Rennes Métropole, MSA, Familles Rurales, Ville de Paris, L’Académie du Climat, ChangeNOW, YouTube Shorts, TikTok for Business.": "Partner logos: Rennes Métropole, MSA, Familles Rurales, Ville de Paris, L’Académie du Climat, ChangeNOW, YouTube Shorts, TikTok for Business.",
+    "Portrait de Marco Gicquel en chemise rayée bleue.": "Portrait of Marco Gicquel in a blue striped shirt.",
+    "Enveloppes vierges, papier à lettres et stylo plume sur une table en bois sombre.": "Blank envelopes, writing paper and a fountain pen on a dark wooden table.",
+    "Rotative d’imprimerie en mouvement, papier qui défile sur les rouleaux.": "Printing press in motion, paper running over the rollers.",
+    "Miniature « Les dessous de la fringue low-cost » : boutique de vêtements et Louise Aubery en robe rouge.": "“Les dessous de la fringue low-cost” thumbnail: clothing store and Louise Aubery in a red dress.",
+    "Rangée de machines à coudre industrielles dans un atelier vide, sous des néons.": "Row of industrial sewing machines in an empty workshop under neon lights.",
+    "Capsules de coton dans un champ au soleil couchant.": "Cotton bolls in a field at sunset.",
+    "Cuves de teinture industrielles vues du dessus.": "Industrial dye vats seen from above.",
+    "Bobines de fil alignées sur une machine à coudre industrielle.": "Spools of thread lined up on an industrial sewing machine.",
+    "Porte-conteneurs vu du ciel sur l’océan.": "Container ship seen from above on the ocean.",
+    "Friperie chaleureuse, vêtements de seconde main rangés par couleur.": "Cosy thrift shop, second-hand clothes sorted by colour.",
+    "Mains qui recousent un jean usé avec du fil et une aiguille.": "Hands mending worn jeans with needle and thread.",
+    "Première page du diaporama « La fast fashion ».": "First slide of the “Fast fashion” deck.",
+    "Fiche récapitulative « La fast-fashion ».": "“Fast fashion” summary sheet.",
+    "Couverture rose du podcast ENGAGEMENT : « Échanges, réflexions, discussions », trois portraits en noir et blanc.": "Pink cover of the ENGAGEMENT podcast: “Conversations, reflections, discussions”, three black-and-white portraits.",
+    "Enregistreur audio portable posé sur une table de café, entre deux tasses.": "Handheld audio recorder on a café table, between two cups.",
+    "Casque audio posé sur une pile de papier journal vierge.": "Headphones resting on a pile of blank newsprint."
   };
+  const TITLES_EN = { enquete: "Behind cheap clothes · Marco Investigation", podcast: "ENGAGEMENT · Marco Investigation", legal: "Legal notice · Marco Investigation", notfound: "Page not found · Marco Investigation" };
   const fr = new Map();
   const frAttr = new Map();
   MI.i18n = {
@@ -164,7 +203,10 @@
         const k = el.getAttribute("data-i18n");
         el.innerHTML = lang === "en" && EN[k] ? EN[k] : fr.get(el);
       });
-      ["aria-label", "title", "placeholder"].forEach(attr => {
+      if (!MI.__frTitle) MI.__frTitle = document.title;
+      const pageKey = document.body.getAttribute("data-page");
+      document.title = lang === "en" && TITLES_EN[pageKey] ? TITLES_EN[pageKey] : MI.__frTitle;
+      ["aria-label", "title", "placeholder", "alt"].forEach(attr => {
         document.querySelectorAll("[" + attr + "]").forEach(el => {
           const key = el; if (!frAttr.has(key)) frAttr.set(key, {});
           const store = frAttr.get(key);
