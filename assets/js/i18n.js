@@ -127,13 +127,14 @@
     "lg.host": "Hosting", "lg.data": "Personal data and cookies",
     "lg.d1": "This mock-up sets no analytics cookies. YouTube videos only load on click, from youtube-nocookie.com. Podcast extracts only load on click.",
     "lg.d2": "The mock-up forms send no data. Before launch, specify the sending tool, the purpose and retention period of the data, and the contact for exercising your rights.",
-    "lg.credits": "Credits", "lg.c1": "Photos, thumbnails, covers and documents: Marco Investigation. Atmospheric photos without real people are generated illustrations, flagged as such in the temporary visuals.",
+    "lg.credits": "Credits", "lg.c1": "Photos, thumbnails, covers and documents: Marco Investigation. The atmospheric images (places, objects, materials) are AI-generated illustrations, labelled “Generated illustration”; they show no real people.",
     "lg.c2": "Fraunces, Inter Tight and Caveat fonts (SIL Open Font License). Animation: GSAP, Lenis, OGL.",
     /* clés utilisées par le script */
     "cursor.voir": "Watch", "cursor.ecouter": "Listen", "cursor.lire": "Read",
     "audio.again": "Extract finished. Click to play it again.", "audio.loading": "Loading the extract…", "audio.playing": "Playing the extract (30 s)",
     "audio.error": "Extract unavailable here: listen to the episode on Spotify.", "audio.aria": "Listen to a 30-second extract",
     "err.email": "Check the email address: it needs an @ and a domain.", "err.choice": "Choose an option to continue.", "err.field": "Fill in this field to continue.",
+    "ai.tag": "Generated illustration",
     "intro": "Press make-ready", "cat.formation": "Fast fashion: slides, quiz and summary sheet", "cat.read": "Read the full investigation",
     "f.theme": "Theme", "f.all": "All", "f.format": "Format", "ep.trailer": "Trailer: first 30 seconds", "ep.extract": "30-second extract"
   };

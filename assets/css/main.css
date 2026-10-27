@@ -254,6 +254,12 @@ mark.hl { background: linear-gradient(transparent 0 0); color: inherit; padding:
   background: var(--paper); color: var(--ink); padding: .35em .55em; max-width: calc(100% - 20px);
   border-left: 3px solid var(--red);
 }
+.media .ai-tag {
+  position: absolute; right: 8px; bottom: 8px; z-index: 3; pointer-events: none;
+  font-family: var(--f-ui); font-size: .62rem; font-weight: 600; letter-spacing: .04em;
+  color: var(--paper); background: rgba(23, 20, 15, .55); padding: .25em .5em;
+}
+.edito__visual > .media .ai-tag { top: 8px; bottom: auto; }
 @property --dot { syntax: "<percentage>"; inherits: false; initial-value: 75%; }
 .dots > img {
   -webkit-mask-image: radial-gradient(circle at center, #000 var(--dot), transparent calc(var(--dot) + 1.5%));
@@ -444,7 +450,7 @@ figcaption { margin-top: 8px; }
 .mags { display: grid; gap: clamp(36px, 5vw, 70px); grid-template-columns: 1fr; }
 @media (min-width: 860px) { .mags { grid-template-columns: 1fr 1fr; } }
 .mag { display: grid; grid-template-columns: minmax(150px, 42%) 1fr; gap: clamp(18px, 3vw, 36px); align-items: center; }
-@media (max-width: 520px) { .mag { grid-template-columns: 1fr; } .mag .book { max-width: 200px; margin: 0 auto 36px; } }
+@media (max-width: 520px) { .mag { grid-template-columns: 1fr; } .mag .book { width: 200px; max-width: 100%; justify-self: center; margin-bottom: 36px; } }
 .book { perspective: 1400px; }
 .book__scroll { transform-style: preserve-3d; will-change: transform; }
 .book__inner { position: relative; aspect-ratio: 5 / 8; transform-style: preserve-3d; transform: rotateY(-28deg) rotateX(4deg); transition: transform .8s var(--ease); }

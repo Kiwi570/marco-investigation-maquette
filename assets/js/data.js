@@ -3,7 +3,12 @@
 window.MI_DATA = {
   /* Images Grok déjà reçues (nom de fichier sans extension). Les autres emplacements
      affichent un visuel provisoire dessiné en code. */
-  grokReady: [],
+  grokReady: [
+    "accueil-courrier-carnet", "accueil-ecoles-classe", "accueil-kiosque-journaux", "accueil-redaction-bureau", "accueil-redaction-bureau-mobile",
+    "accueil-rotative", "accueil-studio-micro", "enquete-atelier-machines", "enquete-bobines-fil", "enquete-conteneurs", "enquete-coton",
+    "enquete-friperie", "enquete-ouverture-vetements", "enquete-ouverture-vetements-mobile", "enquete-reparation", "enquete-teinture",
+    "podcast-casque", "podcast-enregistreur", "podcast-ouverture-studio", "podcast-ouverture-studio-mobile"
+  ],
 
   themes: {
     climat: { fr: "Climat & vivant", en: "Climate & living world" },

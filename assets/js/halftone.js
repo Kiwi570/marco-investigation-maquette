@@ -53,9 +53,22 @@
       const name = img.getAttribute("data-grok");
       const fig = img.closest(".media");
       if (ready.indexOf(name) > -1) {
-        const base = "assets/img/grok/" + name;
-        img.srcset = base + "-480.webp 480w, " + base + "-960.webp 960w, " + base + "-1600.webp 1600w";
+        /* version portrait sur téléphone quand elle existe (choisie au chargement) */
+        const mobile = name + "-mobile";
+        const useMobile = ready.indexOf(mobile) > -1 && window.matchMedia("(max-width: 720px)").matches;
+        const base = "assets/img/grok/" + (useMobile ? mobile : name);
+        if (!img.hasAttribute("fetchpriority")) img.loading = "lazy";
+        img.decoding = "async";
+        if (!img.sizes) img.sizes = img.getAttribute("data-sizes") || "100vw";
+        img.srcset = base + "-480.webp 480w, " + base + "-960.webp 960w, " + base + "-1600.webp 1168w";
         img.src = base + "-960.webp";
+        if (fig && !fig.querySelector(".ai-tag")) {
+          const tag = document.createElement("span");
+          tag.className = "ai-tag";
+          tag.setAttribute("data-i18n", "ai.tag");
+          tag.textContent = "Illustration générée";
+          fig.appendChild(tag);
+        }
       } else {
         const ratio = parseFloat(img.getAttribute("data-ratio")) || 1.5;
         img.src = MI.placeholder(name, ratio);
