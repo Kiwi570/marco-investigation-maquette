@@ -141,6 +141,12 @@
     window.addEventListener("scroll", onScroll, { passive: true });
     header.addEventListener("focusin", () => header.classList.remove("is-hidden"));
   }
+  /* hauteur réelle de l'en-tête, pour les sections épinglées */
+  if (header) {
+    const setEntete = () => document.documentElement.style.setProperty("--entete-h", Math.ceil(header.getBoundingClientRect().height) + "px");
+    setEntete();
+    if (window.ResizeObserver) new ResizeObserver(setEntete).observe(header); else window.addEventListener("resize", setEntete);
+  }
   if (page === "home" && window.IntersectionObserver) {
     const links = $$(".site-header .nav a[href^='#']");
     const map = new Map();
@@ -502,7 +508,7 @@
       gsap.to(sheet, { xPercent: -105, duration: 0.7, ease: "power3.inOut", delay: 0.05 });
     }
   }
-  window.addEventListener("pageshow", e => { if (e.persisted && sheet && hasGsap) gsap.set(sheet, { xPercent: 105 }); });
+  window.addEventListener("pageshow", e => { if (e.persisted && sheet && hasGsap) gsap.set(sheet, { xPercent: -105 }); });
 
   /* ---------- Pied de page : titre qui s'imprime ---------- */
   function revealTitles(root) {
@@ -553,6 +559,7 @@
     const note = $(".proof__note", proof), caret = $(".proof__caret", proof);
     const stamp = $("#edito [data-stamp]");
     if (!hasGsap || MI.calm) return;
+    if (window.matchMedia("(min-width: 980px)").matches) $("#edito .edito__grid").classList.add("is-pin");
     let svg = $(".proof__svg", proof);
     if (!svg) {
       svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
@@ -574,7 +581,7 @@
     const desktop = window.matchMedia("(min-width: 980px)").matches;
     const tl = gsap.timeline({
       scrollTrigger: desktop
-        ? { trigger: "#edito .edito__grid", start: "top 18%", end: "+=110%", pin: true, scrub: 0.6, anticipatePin: 1 }
+        ? { trigger: "#edito .edito__grid", start: "top top", end: "+=110%", pin: true, scrub: 0.6 }
         : { trigger: proof, start: "top 70%", once: true }
     });
     tl.to(caret, { scale: 1, duration: 0.3, ease: "back.out(3)" })
